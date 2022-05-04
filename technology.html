@@ -93,10 +93,10 @@
       >
         <button
           aria-selected="true"
-          data-image="space-capsule-image"
           role="tab"
           aria-controls="space-capsule"
           tabindex="0"
+          data-image="space-capsule-image"
         >
           1
           <span class="sr-only">The commander</span>
@@ -143,11 +143,12 @@
           you entertained.
         </p>
       </article>
-      <img
-        id="space-capsule-image"
-        src="assets/technology/image-space-capsule-portrait.jpg "
-        alt="Commander Douglas Hurley"
-      />
+      <picture id="space-capsule-image">
+        <img
+          src="assets/technology/image-space-capsule-portrait.jpg "
+          alt="Commander Douglas Hurley"
+        />
+      </picture>
 
       <!-- <picture id="space-capsule-image">
         <source
@@ -182,12 +183,12 @@
         </p>
       </article>
 
-      <img
-        hidden
-        id="launch-vehicle-image"
-        src="assets/technology/image-launch-vehicle-portrait.jpg"
-        alt="picture of a launch vehicle"
-      />
+      <picture hidden id="launch-vehicle-image">
+        <img
+          src="assets/technology/image-launch-vehicle-portrait.jpg"
+          alt="picture of a launch vehicle"
+        />
+      </picture>
 
       <!-- Space port -->
 
@@ -210,12 +211,12 @@
         </p>
       </article>
 
-      <img
-        id="space-port-image"
-        hidden
-        src="assets/technology/image-spaceport-portrait.jpg"
-        alt="picture of a space port"
-      />
+      <picture hidden id="space-port-image">
+        <img
+          src="assets/technology/image-spaceport-portrait.jpg"
+          alt="picture of a space port"
+        />
+      </picture>
     </main>
   </body>
 </html>

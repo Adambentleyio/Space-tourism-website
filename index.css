@@ -723,7 +723,7 @@ body {
   padding-bottom: min(16rem, 5vh);
 }
 
-.grid-container--technology > img {
+.grid-container--technology > picture {
   grid-area: image;
   position: relative;
   max-width: 100%;

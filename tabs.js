@@ -38,13 +38,11 @@ function changeTabArea(e) {
   const targetTab = e.target;
   const targetPanel = targetTab.getAttribute("aria-controls");
   const targetImg = targetTab.getAttribute("data-image");
+  console.log("target image:", targetImg);
 
   // then get the parent nodes until we're at the level of the tab content divs
   const targetContainer = targetTab.parentNode;
   const mainContainer = targetContainer.parentNode;
-
-  console.log("target container", targetContainer);
-  console.log("main container", mainContainer);
 
   // remove the aria-selected from all buttons/tabs
   targetContainer
@@ -58,7 +56,7 @@ function changeTabArea(e) {
   // target all the picture elements and set them to hidden
 
   hideContent(mainContainer, '[role = "tabpanel"]');
-  hideContent(mainContainer, "picture" || "img");
+  hideContent(mainContainer, "picture", "img");
   showContent(mainContainer, targetPanel);
   showContent(mainContainer, targetImg);
 
@@ -70,7 +68,6 @@ function changeTabArea(e) {
 
   function showContent(parent, content) {
     // target the target panel (from aria controls) and turn it to visible
-    // console.log(parent, content);
     parent.querySelector([`#${content}`]).removeAttribute("hidden");
   }
 }
